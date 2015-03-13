@@ -71,13 +71,11 @@ public class BinarySearchTest {
 		assertThat(result.isFound(), is(false));
 	}
 	
-	@Test	
-	public void Search_SeqEmptyAndResultNotIncluded_expectedFalse(){
+	@Test (expected = IllegalArgumentException.class)
+	public void Search_SeqLength0AndResultNotIncluded_expectedIllegalArgumentException(){
 		int[] seq = { };
 		SearchResult result = BinarySearch.search(11, seq);
 		
-		assertThat(result.isFound(), is(false));
-		assertThat(result.getPosition(), is(-1));
 	}
 	
 	/* Ten test nie przechodzi, poniewaz sa 3 takie same elementy, a to wyklucza uzycie tego algorytmu */

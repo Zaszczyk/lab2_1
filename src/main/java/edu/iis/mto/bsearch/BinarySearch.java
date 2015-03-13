@@ -22,6 +22,10 @@ public class BinarySearch {
 	 */
 	public static SearchResult search(int key, int[] seq) {
 		int start = 0;
+		
+		if(seq.length == 0)
+			throw new IllegalArgumentException();
+		
 		int end = seq.length - 1;
 		int center;
 		SearchResult result = new SearchResult();
