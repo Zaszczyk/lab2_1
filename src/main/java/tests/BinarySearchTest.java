@@ -80,6 +80,7 @@ public class BinarySearchTest {
 		assertThat(result.getPosition(), is(-1));
 	}
 	
+	/* Ten test nie przechodzi, poniewaz sa 3 takie same elementy, a to wyklucza uzycie tego algorytmu */
 	@Test	
 	public void Search_SeqLength3AndSameElements_expectedTrue(){
 		int[] seq = {3, 3, 3};
